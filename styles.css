@@ -1,6 +1,11 @@
+* {
+   scroll-behavior: smooth;
+}
+
 .main_container {
    min-height: 90vh;
 }
+
 .my_nav {
    height: 4rem;
    box-shadow: 0px 2px 8px rgb(0 0 0 / 30%);

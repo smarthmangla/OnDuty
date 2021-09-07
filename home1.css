@@ -1,0 +1,123 @@
+* {
+   scroll-behavior: smooth;
+}
+
+body{
+   margin: 0;
+}
+
+a {
+   color: white;
+   text-decoration: none;
+}
+
+.my_nav {
+   height: 4rem;
+   box-shadow: 0px 2px 8px rgb(0 0 0 / 30%);
+   background-color: rgb(186 213 255 / 80%);
+   backdrop-filter: blur(10px);
+}
+
+.main-header{
+   background-image: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url('./header.jpeg');
+   background-size: cover;
+   height: 23em;
+   padding-top: 110px;
+   padding-bottom: 200px;
+}
+
+.header-info{
+   background:  #eeeeee;
+   padding-top: 2em;
+   padding-bottom: 1em;
+}
+
+.container1 {
+   margin-top: 80px;
+   margin-left: 60px;
+   width: 1376px;
+   height: 550px;
+   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.17), 0px 2px 6px 0px hsla(0, 0%, 0%, 0.02);
+   background-color: #ffffff;
+   overflow: hidden;
+   border-radius: 20px;
+   align-items: center;
+}
+
+.left {
+   width: 50%;
+   float: left;
+}
+
+.right {
+   float: right;
+   width: 50%;
+   height: 800px;
+   background-color: #d9d9d9;
+   overflow: visible;
+}
+
+.piehead {
+   padding-top: 20px;
+   padding-left: 80px;
+   width: 600px;
+   overflow: visible;
+   white-space: pre;
+   font-weight: 900;
+   font-family: "Inter-Bold", "Inter", sans-serif;
+   /* letter-spacing: 2px; */
+   color: #333;
+   font-size: 30px;
+   line-height: 0.8;
+   text-transform: uppercase;
+   margin-bottom: 5px;
+   text-align: center;
+}
+
+.chart {
+   margin: 50px;
+   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.17), 0px 2px 6px 0px hsla(0, 0%, 0%, 0.02);
+   background-color: #ffffff;
+   overflow: visible;
+   border-radius: 12px;
+   align-items: center;
+   padding: 10px;
+}
+
+.piehead {
+   padding-top: 20px;
+   padding-left: 80px;
+   width: 600px;
+   overflow: visible;
+   white-space: pre;
+   font-weight: 900;
+   font-family: "Inter-Bold", "Inter", sans-serif;
+   /* letter-spacing: 2px; */
+   color: #333;
+   font-size: 30px;
+   line-height: 0.8;
+   text-transform: uppercase;
+   margin-bottom: 5px;
+   text-align: center;
+}
+
+.maps {
+      width: 550px;
+      height: 450px;
+      margin-left: 70px;
+}
+
+section.news{
+   margin-top: 5rem;
+}
+
+div.my_list-item{
+   background-color: #f0efef;
+}
+
+footer.my_footer {
+   padding-top: 25px;
+   padding-bottom: 25px;
+   color: white;
+   background-color: #1e2e79;
+}
