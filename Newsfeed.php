@@ -57,7 +57,7 @@ $num3 = mysqli_num_rows($result3);
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light my_nav sticky-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="./index.php"><strong>OnDuty Admin</strong></a>
+			<a class="navbar-brand" href="./admin.php"><strong>OnDuty Admin</strong></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -96,7 +96,7 @@ $num3 = mysqli_num_rows($result3);
 	</nav>
 
 	<!-- Main content -->
-	<div class="container-fluid">
+	<div class="container-fluid main_container">
 		<h1 class="text-center my-3 fw-bold">NewsFeed Information - News and OverAll Details</h1>
 		<hr class="mb-4">
 		<div class="container">

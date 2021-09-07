@@ -36,7 +36,7 @@ $num = mysqli_num_rows($result);
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light my_nav sticky-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="./index.php"><strong>OnDuty Admin</strong></a>
+			<a class="navbar-brand" href="./admin.php"><strong>OnDuty Admin</strong></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -75,7 +75,7 @@ $num = mysqli_num_rows($result);
 	</nav>
 
 	<!-- Main Content -->
-	<div class="container-fluid">
+	<div class="container-fluid main_container">
 		<h1 class="text-center my-3 fw-bold">Complaints Information - Bulletin Board</h1>
 		<hr>
 		<div class="row">

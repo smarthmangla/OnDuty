@@ -52,7 +52,7 @@ $num4 = mysqli_num_rows($result4);
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light my_nav sticky-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="./index.php"><strong>OnDuty Admin</strong></a>
+			<a class="navbar-brand" href="./admin.php"><strong>OnDuty Admin</strong></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -91,7 +91,7 @@ $num4 = mysqli_num_rows($result4);
 	</nav>
 
 	<!-- Main content -->
-	<div class="container-fluid">
+	<div class="container-fluid main_container">
 		<h1 class="text-center my-3 fw-bold">Hotspot Information</h1>
 		<hr class="mb-4">
 		<div class="container">
@@ -207,6 +207,8 @@ $num4 = mysqli_num_rows($result4);
 	</footer>
 	
 	<!-- import script -->
+	<!-- Bootstrap js -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 	<script src="index.js"></script>
 	<!-- end import script -->

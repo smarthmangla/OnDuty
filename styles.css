@@ -1,3 +1,6 @@
+.main_container {
+   min-height: 90vh;
+}
 .my_nav {
    height: 4rem;
    box-shadow: 0px 2px 8px rgb(0 0 0 / 30%);
@@ -17,13 +20,13 @@ hr{
    width: 50%;
 }
 
-.news_head, h3.hotspot_head{
+.news_head,  h3.hotspot_head,  h3.stats_head{
    padding-left: 1em;
    background-color: #1e2e79;
    color: white;
 }
 .news_list, .my_list-item{
-   background-color: #eeeded;
+   background-color: #f0efef;
 }
 .news_det, .hotspot_det{
    background-color: #f3f8fe;
