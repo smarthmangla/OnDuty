@@ -3,21 +3,6 @@ error_reporting(E_ERROR | E_PARSE);
 include_once('db.php');
 ?>
 <?php
-error_reporting(E_ERROR | E_PARSE);
-$Crime_Name = $_POST['crimename'];
-$Crime_Desc = $_POST['crimedesc'];
-$likes = $_POST['likes'];
-$News_id = $_POST['newsid'];
-$insertNewComplaint = "INSERT IGNORE INTO NewsFeed(Crime_Name, Crime_Desc, likes, News_id) values
-	( '$Crime_Name', '$Crime_Desc', '$likes', '$News_id')";
-
-$run = mysqli_query($con, $insertNewComplaint);
-
-if (!$run) {
-	die('Error: ' . mysqli_error($con));
-}
-?>
-<?php
 $sql = "SELECT * FROM `newsfeed`";
 $result = mysqli_query($con, $sql);
 $num = mysqli_num_rows($result);
@@ -198,6 +183,18 @@ $num3 = mysqli_num_rows($result3);
 						</div>
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</form>
+					<?php
+						error_reporting(E_ERROR | E_PARSE);
+						$Crime_Name = $_POST['crimename'];
+						$Crime_Desc = $_POST['crimedesc'];
+						$likes = $_POST['likes'];
+						$News_id = $_POST['newsid'];
+						$insertNewComplaint = "INSERT IGNORE INTO NewsFeed(Crime_Name, Crime_Desc, likes, News_id) values ( '$Crime_Name', '$Crime_Desc', '$likes', '$News_id')";
+						$run = mysqli_query($con, $insertNewComplaint);
+						if (!$run) {
+							die('Error: ' . mysqli_error($con));
+						}
+					?>
 				</div>
 			</div>
 		</div>

@@ -17,14 +17,7 @@ hr{
    width: 50%;
 }
 
-footer.my_footer {
-   padding-top: 25px;
-   padding-bottom: 25px;
-   color: white;
-   background-color: #1e2e79;
-}
-
-.news_head{
+.news_head, h3.hotspot_head{
    padding-left: 1em;
    background-color: #1e2e79;
    color: white;
@@ -32,6 +25,13 @@ footer.my_footer {
 .news_list, .my_list-item{
    background-color: #eeeded;
 }
-.news_det{
+.news_det, .hotspot_det{
    background-color: #f3f8fe;
+}
+
+footer.my_footer {
+   padding-top: 25px;
+   padding-bottom: 25px;
+   color: white;
+   background-color: #1e2e79;
 }

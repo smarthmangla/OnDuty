@@ -61,7 +61,6 @@
 			echo 'Wrong Credentials';
 		}
 	}
-
 	?>
 
 	<!-- Navbar -->
