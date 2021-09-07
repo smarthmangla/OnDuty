@@ -1,0 +1,45 @@
+* {
+   scroll-behavior: smooth;
+}
+
+.main_container {
+   min-height: 90vh;
+}
+
+.my_nav {
+   height: 4rem;
+   box-shadow: 0px 2px 8px rgb(0 0 0 / 30%);
+   background-color: rgb(186 213 255 / 80%);
+   backdrop-filter: blur(10px);
+}
+
+a {
+   text-decoration: none;
+}
+
+hr{
+   border: 2px solid black;
+}
+
+.complaint_img{
+   width: 50%;
+}
+
+.news_head,  h3.hotspot_head,  h3.stats_head{
+   padding-left: 1em;
+   background-color: #1e2e79;
+   color: white;
+}
+.news_list, .my_list-item{
+   background-color: #f0efef;
+}
+.news_det, .hotspot_det{
+   background-color: #f3f8fe;
+}
+
+footer.my_footer {
+   padding-top: 25px;
+   padding-bottom: 25px;
+   color: white;
+   background-color: #1e2e79;
+}
