@@ -1,0 +1,37 @@
+.my_nav {
+   height: 4rem;
+   box-shadow: 0px 2px 8px rgb(0 0 0 / 30%);
+   background-color: rgb(186 213 255 / 80%);
+   backdrop-filter: blur(10px);
+}
+
+a {
+   text-decoration: none;
+}
+
+hr{
+   border: 2px solid black;
+}
+
+.complaint_img{
+   width: 50%;
+}
+
+footer.my_footer {
+   padding-top: 25px;
+   padding-bottom: 25px;
+   color: white;
+   background-color: #1e2e79;
+}
+
+.news_head{
+   padding-left: 1em;
+   background-color: #1e2e79;
+   color: white;
+}
+.news_list, .my_list-item{
+   background-color: #eeeded;
+}
+.news_det{
+   background-color: #f3f8fe;
+}
