@@ -1,26 +1,26 @@
 <?php
 session_start();
 
-if(!$_SESSION['auth'])
-{
-    header('location:login.php');
+if (!$_SESSION['auth']) {
+	header('location:login.php');
 }
-?> 
+?>
 <?php
 include_once('db.php');
 ?>
 <?php
-      $sql = "SELECT * FROM `complaints`";
-      $result=mysqli_query($con,$sql);
-      $num=mysqli_num_rows($result);
+$sql = "SELECT * FROM `complaints`";
+$result = mysqli_query($con, $sql);
+$num = mysqli_num_rows($result);
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Admin</title>
 
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="icon" type="image/png" href="admin_logo.png"/>
+	<link rel="icon" type="image/png" href="admin_logo.png" />
 
 	<!-- Import lib -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
@@ -30,6 +30,7 @@ include_once('db.php');
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body class="overlay-scrollbar">
 	<!-- navbar -->
 	<div class="navbar">
@@ -62,11 +63,11 @@ include_once('db.php');
 					<div class="dropdown-menu-header">
 						<span>
 							Notifications
-					<div class="dropdown-menu-footer">
-						<span>
-							View all notifications
-						</span>
-					</div>
+							<div class="dropdown-menu-footer">
+								<span>
+									View all notifications
+								</span>
+							</div>
 				</ul>
 			</li>
 			<li class="nav-item avt-wrapper">
@@ -81,7 +82,7 @@ include_once('db.php');
 								<span>Newsfeed</span>
 							</a>
 						</li>
-						<li  class="dropdown-menu-item">
+						<li class="dropdown-menu-item">
 							<a href="hotspot.php" class="dropdown-menu-link">
 								<div>
 									<i class="far fa-credit-card"></i>
@@ -89,7 +90,7 @@ include_once('db.php');
 								<span>Hotspots</span>
 							</a>
 						</li>
-						<li  class="dropdown-menu-item">
+						<li class="dropdown-menu-item">
 							<a href="stats.php" class="dropdown-menu-link">
 								<div>
 									<i class="fas fa-spinner"></i>
@@ -97,7 +98,7 @@ include_once('db.php');
 								<span>Statistics</span>
 							</a>
 						</li>
-						<li  class="dropdown-menu-item">
+						<li class="dropdown-menu-item">
 							<a href="index.php" class="dropdown-menu-link">
 								<div>
 									<i class="fas fa-sign-out-alt"></i>
@@ -118,54 +119,55 @@ include_once('db.php');
 	<div class="wrapper">
 		<div class="row">
 			<!-- <div class="col-8 col-m-12 col-sm-12"> -->
-				<div class="card">
-					<div class="card-header">
-						<h3>
-							Complaints info
-						</h3>
-						<i class="fas fa-ellipsis-h"></i>
-					</div>
-					<div class="card-content">
-						<table>
-							<thead>
-								<tr>
-									<th>Id</th>
-									<th>Name</th>
-									<th>Email Address</th>
-									<th>Phone Number</th>
-									<th>Aadhar Number</th>
-                  <th>Complaint Address</th>
-                  <th>Complaint City</th>
-                  <th>Complaint Desc</th>
-									<th>Complaint Image</th>
-								</tr>
-							</thead>
-              <?php
-        while($row=mysqli_fetch_assoc($result)){
-       ?>
+			<div class="card">
+				<div class="card-header">
+					<h3>
+						Complaints info
+					</h3>
+					<i class="fas fa-ellipsis-h"></i>
+				</div>
+				<div class="card-content">
+					<table>
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Name</th>
+								<th>Email Address</th>
+								<th>Phone Number</th>
+								<th>Aadhar Number</th>
+								<th>Complaint Address</th>
+								<th>Complaint City</th>
+								<th>Complaint Desc</th>
+								<th>Complaint Image</th>
+							</tr>
+						</thead>
+						<?php
+						while ($row = mysqli_fetch_assoc($result)) {
+						?>
 							<tbody>
 								<tr>
-                <td><?php echo $row['Reference_id'];?></td>
-									<td><?php echo $row['First_Name'];?></td>
-                  <td><?php echo $row['Email_Address'];?></td>
-                  <td><?php echo $row['Phone_Number'];?></td>
-                  <td><?php echo $row['Aadhar_Number'];?></td>
-                  <td><?php echo $row['Complaint_Address'];?></td>
-                  <td><?php echo $row['Complaint_City'];?></td>
-                  <td><?php echo $row['Complaint_Desc'];?></td>
-									<td><img src="uploads/<?=$row['Complaint_Proof']?>"></td>
-                  <?php
-              }
-              ?>
+									<td><?php echo $row['Reference_id']; ?></td>
+									<td><?php echo $row['First_Name']; ?></td>
+									<td><?php echo $row['Email_Address']; ?></td>
+									<td><?php echo $row['Phone_Number']; ?></td>
+									<td><?php echo $row['Aadhar_Number']; ?></td>
+									<td><?php echo $row['Complaint_Address']; ?></td>
+									<td><?php echo $row['Complaint_City']; ?></td>
+									<td><?php echo $row['Complaint_Desc']; ?></td>
+									<td><img src="uploads/<?= $row['Complaint_Proof'] ?>"></td>
+								<?php
+							}
+								?>
 							</tbody>
-						</table>
-					</div>
+					</table>
 				</div>
+			</div>
 		</div>
-	<!-- end main content -->
-	<!-- import script -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-	<script src="index.js"></script>
-	<!-- end import script -->
+		<!-- end main content -->
+		<!-- import script -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+		<script src="index.js"></script>
+		<!-- end import script -->
 </body>
+
 </html>

@@ -3,6 +3,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+
 body {
     font-family: 'Rubik', sans-serif;
 }
@@ -185,6 +186,7 @@ body {
         visibility: hidden;
         transform: translateY(-40px);
     }
+
     100% {
         opacity: 1;
         visibility: visible;
@@ -197,6 +199,7 @@ body {
         opacity: 0;
         width: 0;
     }
+
     100% {
         opacity: 1;
         padding: 20px 40px;

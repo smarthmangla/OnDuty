@@ -2,27 +2,24 @@
 
 session_start();
 
-$code="";
+$code = "";
 
-if(isset($_POST["captcha"])&&$_POST["captcha"]!=""&&$_SESSION["code"]==$_POST["captcha"])
-{
-$con = mysqli_connect("localhost", "root", "Smarthyoyo9873");
-      if (!$con) {
-          die('Could not connect: ' . mysqli_connect_error());
-      } else {
-    
-      }
+if (isset($_POST["captcha"]) && $_POST["captcha"] != "" && $_SESSION["code"] == $_POST["captcha"]) {
+    $con = mysqli_connect("localhost", "root", "");
+    if (!$con) {
+        die('Could not connect: ' . mysqli_connect_error());
+    } else {
+    }
 
-      //Database Selection
-      if (mysqli_select_db($con, "CivilDisobedience")) {
-    
-      } else {
-          die("Error in Selecting the Database <br>". mysqli_errno($con));
-      }
+    //Database Selection
+    if (mysqli_select_db($con, "CivilDisobedience")) {
+    } else {
+        die("Error in Selecting the Database <br>" . mysqli_errno($con));
+    }
 
-      $mysql="UPDATE Complaints SET Complaint_Verified= true WHERE Complaint_Verified=false";
+    $mysql = "UPDATE Complaints SET Complaint_Verified= true WHERE Complaint_Verified=false";
 
-      if (!mysqli_query($con, $mysql)) {
+    if (!mysqli_query($con, $mysql)) {
         die('Error: ' . mysqli_error($con));
     }
 
@@ -48,12 +45,12 @@ $con = mysqli_connect("localhost", "root", "Smarthyoyo9873");
                     <h2 class="animation a1">Confirmation</h2>
                     <br>
                     <h4 class="animation a2">Hey, Your complaint is successfully filed with the portal with:<br><b>Reference Id: 454454525145</b>
-    We will take neccessary action and get back to you as soon as possible.
-    You would be notified when a officer would be assigned to your case.</h4>
+                        We will take neccessary action and get back to you as soon as possible.
+                        You would be notified when a officer would be assigned to your case.</h4>
                 </div>
-                    <a href="index.php">
-                        <button class="animation a5">Back to Home Page</button>
-                    </a>
+                <a href="index.php">
+                    <button class="animation a5">Back to Home Page</button>
+                </a>
             </div>
             <div class="right">
                 <img src="images/emblem.jpg" alt="emblem" id="image">
@@ -65,12 +62,10 @@ $con = mysqli_connect("localhost", "root", "Smarthyoyo9873");
 
 <?php
 
-include 'db.php';
+    include 'db.php';
 
-session_destroy();
-}
-else
-{
+    session_destroy();
+} else {
     header('location: complaint.php');
 }
 
