@@ -315,6 +315,7 @@ global $man;
     </div>
   </section>
 
+  <!-- team area -->
   <section id="team" style="margin-top: 4em;">
     <div class="container text-center mb-5">
       <h2 class="fw-bold">Project Team</h2>
@@ -323,7 +324,7 @@ global $man;
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="..." class="img-fluid rounded-start" alt="...">
+                <img src="./ashish.jpg" class="img-fluid rounded-start" style="height: 15rem;" alt="Ashish Garg">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -339,7 +340,7 @@ global $man;
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="..." class="img-fluid rounded-start" alt="...">
+                <img src="./smarth.jpg" class="img-fluid rounded-start" style="height: 15rem;" alt="Smarth Mangla">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
