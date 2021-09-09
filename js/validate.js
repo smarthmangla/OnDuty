@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-const name = document.getElementById('name');
+const user = document.getElementById('user');
 // const email = document.getElementById('email');
 const phoneNumber = document.getElementById('phoneNumber');
 const aadharNumber = document.getElementById('aadharNumber');
@@ -9,12 +9,11 @@ const crimeDesc = document.getElementById('crimeDesc');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-
     checkInputs();
 });
 
 function checkInputs() {
-    const nameValue = name.value.trim();
+    const userValue = user.value.trim();
     // const emailValue = email.value.trim();
     const phoneNumberValue = phoneNumber.value.trim();
     const aadharNumberValue = aadharNumber.value.trim();
@@ -22,12 +21,12 @@ function checkInputs() {
     const cityValue = city.value.trim();
     const crimeDescValue = crimeDesc.value.trim();
 
-    if (nameValue === '') {
-        setErrorFor(name, 'name cannot be blank');
-    } else if (!isName(nameValue)) {
-        setErrorFor(name, 'Name field can only contain letters and white spaces');
+    if (userValue === '') {
+        setErrorFor(user, 'Name cannot be blank');
+    } else if (!isName(userValue)) {
+        setErrorFor(user, 'Name field can only contain letters and white spaces');
     } else {
-        setSuccessFor(name);
+        setSuccessFor(user);
     }
 
     // if(emailValue === '') {
@@ -82,13 +81,14 @@ function checkInputs() {
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
-    formControl.className = 'form-control error';
+    const val = formControl[1];
+    val.className = 'form-control form-control-lg error';
     small.innerText = message;
 }
 
 function setSuccessFor(input) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control success';
+    formControl.className = 'form-control form-control-lg success';
 }
 
 function isName(name) {
