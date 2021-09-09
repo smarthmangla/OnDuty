@@ -1,5 +1,5 @@
 <?php
-include_once('db.php');
+include_once('./partials/db.php');
 ?>
 <?php
 $sql = "SELECT * FROM `statistics_` WHERE Crime_Name='Detention'";
@@ -64,7 +64,7 @@ global $man;
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>On The Duty</title>
-  <link rel="stylesheet" href="./home1.css">
+  <link rel="stylesheet" href="./css/home.css">
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- bootstrap css -->
@@ -140,38 +140,7 @@ global $man;
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light my_nav sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./admin.php">
-        <img src="./logo1.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        <strong>OnDuty</strong></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="./index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="./complaint.php">File Report</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./Newsfeed.php">Newsfeed</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./hotspot.php">Hotspots</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./stats.php">Statistics</a>
-          </li>
-        </ul>
-        <div class="d-flex mx-2">
-          <a class="btn btn-light mx-1 text-dark" href="./login.php" role="button">Login</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <?php require('partials/navbar.php') ?>
 
   <!-- header -->
   <header class="main-header">
@@ -188,13 +157,13 @@ global $man;
     </div>
     <div class="row mb-5 text-center">
       <div class="col-lg-4 col-md-4">
-        <a class="btn btn-primary" href="./stats.php" role="button">STATISTICS</a>
+        <a class="btn btn-primary" href="./pages/stats.php" role="button">STATISTICS</a>
       </div>
       <div class="col-lg-4 col-md-4">
-        <a class="btn btn-primary btn-lg" href="./complaint.php" role="button">SUBMIT REPORT</a>
+        <a class="btn btn-primary btn-lg" href="./pages/complaint.php" role="button">SUBMIT REPORT</a>
       </div>
       <div class="col-lg-4 col-md-4">
-        <a class="btn btn-primary btn-lg" href="./hotspot.php" role="button">VIEW HOTSPOTS</a>
+        <a class="btn btn-primary btn-lg" href="./pages/hotspot.php" role="button">VIEW HOTSPOTS</a>
       </div>
     </div>
   </div>
@@ -324,7 +293,7 @@ global $man;
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="./ashish.jpg" class="img-fluid rounded-start" style="height: 15rem;" alt="Ashish Garg">
+                <img src="./images/ashish.jpg" class="img-fluid rounded-start" style="height: 15rem;" alt="Ashish Garg">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -340,7 +309,7 @@ global $man;
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="./smarth.jpg" class="img-fluid rounded-start" style="height: 15rem;" alt="Smarth Mangla">
+                <img src="./images/smarth.jpg" class="img-fluid rounded-start" style="height: 15rem;" alt="Smarth Mangla">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -358,28 +327,8 @@ global $man;
   </section>
 
   <!-- footer -->
-  <footer class="mt-3 my_footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-8">
-          <h3>OnDuty</h3>
-          <p>Your Safety, Our Priority.</p>
-        </div>
-        <div class="col-lg-4 col-md-4">
-          <h4>Contact Us </h4>
-          <p><Strong>Email : </Strong> otd@gmail.com</p>
-          <p><strong>Call us : </strong> +91 123456</p>
-          <h4>About Us </h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus veritatis, sunt rerum velit eaque earum ex</p>
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <div class="copy text-center">
-          <p><small>Copyright &copy; 2020. All Rights Reserved</small></p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <?php require('./partials/footer.php') ?>
+
   <!-- Bootstrap js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" 53 crossorigin="anonymous"></script>

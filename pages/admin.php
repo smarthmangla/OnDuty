@@ -1,11 +1,5 @@
 <?php
-session_start();
-if (!$_SESSION['auth']) {
-	header('location:login.php');
-}
-?>
-<?php
-include_once('db.php');
+include_once('../partials/db.php');
 ?>
 <?php
 $sql = "SELECT * FROM `complaints`";
@@ -29,50 +23,17 @@ $num = mysqli_num_rows($result);
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 	<!-- End import lib -->
 
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 
 <body class="overlay-scrollbar">
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-light my_nav sticky-top">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="./admin.php"><strong>OnDuty Admin</strong></a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="./index.php">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="./Newsfeed.php">Newsfeed</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="./hotspot.php">Hotspots</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="./stats.php">Statistics</a>
-					</li>
-				</ul>
-				<div class="d-flex mx-2">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Notificatons
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="#">Notification 1</a></li>
-								<li><a class="dropdown-item" href="#">Notification 2</a></li>
-								<li><a class="dropdown-item" href="#">Notification 3</a></li>
-							</ul>
-						</li>
-					</ul>
-					<button class="btn btn-light mx-1" type="submit"><a class="text-dark" href="./logout.php">Logout</a></button>
-				</div>
-			</div>
-		</div>
-	</nav>
+	<?php include('../partials/navbar.php') ?>
+	<?php
+		if (!$_SESSION['auth']) {
+			header('location:../partials/login.php');
+		}
+	?>
 
 	<!-- Main Content -->
 	<div class="container-fluid main_container">
@@ -88,7 +49,7 @@ $num = mysqli_num_rows($result);
 						<div href="#" class="list-group-item list-group-item-action my_list-item my-2" aria-current="true">
 							<div class="row">
 								<div class="col-lg-3 col-md-3 text-center">
-									<img src="IndianEmblem.jpg" class="complaint_img" alt="complaint proof">
+									<img src="../images/IndianEmblem.jpg" class="complaint_img" alt="complaint proof">
 								</div>
 								<div class="col-lg-9 col-md-9">
 									<div class="d-flex w-100">
@@ -119,28 +80,7 @@ $num = mysqli_num_rows($result);
 	</div>
 
 	<!-- footer -->
-	<footer class="mt-3 my_footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-md-8">
-					<h3>OnDuty</h3>
-					<p>Your Safety, Our Priority.</p>
-				</div>
-				<div class="col-lg-4 col-md-4">
-					<h4>Contact Us </h4>
-					<p><Strong>Email : </Strong> otd@gmail.com</p>
-					<p><strong>Call us : </strong> +91 123456</p>
-					<h4>About Us </h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus veritatis, sunt rerum velit eaque earum ex</p>
-				</div>
-			</div>
-			<div class="col-lg-12">
-				<div class="copy text-center">
-					<p><small>Copyright &copy; 2020. All Rights Reserved</small></p>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<?php include('../partials/footer.php') ?>
 
 	<!-- Bootstrap js -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
