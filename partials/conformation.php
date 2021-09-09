@@ -52,23 +52,23 @@ if (isset($_POST["captcha"]) && $_POST["captcha"] != "" && $_SESSION["code"] == 
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light my_nav sticky-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./admin.php"><strong>OnDuty Admin</strong></a>
+                <a class="navbar-brand" href="../pages/admin.php"><strong>OnDuty Admin</strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./index.php">Home</a>
+                            <a class="nav-link" aria-current="page" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./Newsfeed.php">Newsfeed</a>
+                            <a class="nav-link" href="../pages/Newsfeed.php">Newsfeed</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./hotspot.php">Hotspots</a>
+                            <a class="nav-link" href="../pages/hotspot.php">Hotspots</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./stats.php">Statistics</a>
+                            <a class="nav-link" href="../pages/stats.php">Statistics</a>
                         </li>
                     </ul>
                     <div class="d-flex mx-2">
@@ -84,7 +84,6 @@ if (isset($_POST["captcha"]) && $_POST["captcha"] != "" && $_SESSION["code"] == 
                                 </ul>
                             </li>
                         </ul>
-                        <button class="btn btn-light mx-1" type="submit"><a class="text-dark" href="./logout.php">Logout</a></button>
                     </div>
                 </div>
             </div>
@@ -113,7 +112,7 @@ if (isset($_POST["captcha"]) && $_POST["captcha"] != "" && $_SESSION["code"] == 
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="container">
-                        <img src="./IndianEmblem.jpg" alt="Indian Emblem" id="emblem">
+                        <img src="../images/IndianEmblem.jpg" alt="Indian Emblem" id="emblem">
                     </div>
                 </div>
             </div>
@@ -123,11 +122,11 @@ if (isset($_POST["captcha"]) && $_POST["captcha"] != "" && $_SESSION["code"] == 
 
 <?php
 
-    include 'db.php';
+    include './db.php';
 
     session_destroy();
 } else {
-    header('location: complaint.php');
+    header('location:../pages/complaint.php');
 }
 
 ?>

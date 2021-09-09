@@ -19,7 +19,7 @@ a {
 }
 
 .main-header{
-   background-image: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url('./header.jpeg');
+   background-image: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url('../images/header.jpeg');
    background-size: cover;
    height: 23em;
    padding-top: 110px;
