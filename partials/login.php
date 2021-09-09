@@ -56,7 +56,7 @@
 		if (mysqli_num_rows($result) == 1) {
 			session_start();
 			$_SESSION['auth'] = 'true';
-			header('location:admin.php');
+			header('location:/onDuty/pages/admin.php');
 		} else {
 			echo 'Wrong Credentials';
 		}

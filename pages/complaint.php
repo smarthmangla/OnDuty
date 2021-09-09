@@ -47,33 +47,40 @@
 				<div class="card bx">
 					<div class="card-body">
 						<div class="card-title">
-                            <h2>Welcome to the Public Misconduct Forum</h2>
-                            <h4 class="card-text text-muted">Please Enter You're Complaint Details</h4>
-							<form action="../partials/OTP.php" method="post" enctype="multipart/form-data">
+							<h2>Welcome to the Public Misconduct Forum</h2>
+							<h4 class="card-text text-muted">Please Enter Your Complaint Details</h4>
+							<form action="../partials/OTP.php" method="post" enctype="multipart/form-data" id="form">
 								<div class="mb-3">
-									<input type="text" class="form-control form-control-lg" name="name" placeholder="Name" required>
+									<input type="text" class="form-control form-control-lg" name="name" id="user" placeholder="Name" required>
+									<small></small>
 								</div>
 								<div class="mb-3">
 									<input type="email" class="form-control form-control-lg" name="email" placeholder="Email" required>
+									<small></small>
 								</div>
 								<div class="mb-3">
-									<input type="number" class="form-control form-control-lg" name="phoneNumber" placeholder="Phone Number" required>
+									<input type="number" class="form-control form-control-lg" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
+									<small></small>
 								</div>
 								<div class="mb-3">
-									<input type="number" class="form-control form-control-lg" name="aadharNumber" placeholder="Aadhar Number" required>
+									<input type="number" class="form-control form-control-lg" name="aadharNumber" id="aadharNumber" placeholder="Aadhar Number" required>
+									<small></small>
 								</div>
 								<div class="mb-3">
-									<input type="text" class="form-control form-control-lg" name="address" placeholder="Address" required>
+									<input type="text" class="form-control form-control-lg" name="address" id="address" placeholder="Address" required>
+									<small></small>
 								</div>
 								<div class="mb-3">
-									<input type="text" class="form-control form-control-lg" name="city" placeholder="City" required>
+									<input type="text" class="form-control form-control-lg" name="city" id="city" placeholder="City" required>
+									<small></small>
 								</div>
 								<div class="mb-3">
-									<input type="text" class="form-control form-control-lg" name="crimeDesc" placeholder="MisConduct Addressal" required>
+									<input type="text" class="form-control form-control-lg" name="crimeDesc" id="crimeDesc" placeholder="MisConduct Addressal" required>
+									<small></small>
 								</div>
-                                <label for="upload" class="mb-3">
-                                    <input type="file" class="form-control form-control-lg" name="file" required>
-                                </label>
+									<label for="upload" class="mb-3">
+										<input type="file" class="form-control form-control-lg" name="file">
+									</label>
 								<div class="col-4">
 									<input type="submit" class="btn btn-success btn-block">
 								</div>
@@ -94,7 +101,7 @@
 	 <?php include('../partials/footer.php') ?>
 
 
-    <!-- Bootsrap js -->
+	 <!-- Bootsrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 

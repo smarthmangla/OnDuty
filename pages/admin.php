@@ -1,11 +1,10 @@
 <?php
-include_once('../partials/db.php');
-?>
-<?php
+include('../partials/db.php');
 $sql = "SELECT * FROM `complaints`";
 $result = mysqli_query($con, $sql);
 $num = mysqli_num_rows($result);
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -30,9 +29,9 @@ $num = mysqli_num_rows($result);
 	<!-- Navbar -->
 	<?php include('../partials/navbar.php') ?>
 	<?php
-		if (!$_SESSION['auth']) {
-			header('location:../partials/login.php');
-		}
+	if (!$_SESSION['auth']) {
+		header('location:../partials/login.php');
+	}
 	?>
 
 	<!-- Main Content -->
@@ -58,6 +57,11 @@ $num = mysqli_num_rows($result);
 									</div>
 									<p class="mb-1">' . $row['Complaint_Desc'] . '</p>
 									<small>Complaint Location - ' . $row['Complaint_City'] . ' ' . $row['Complaint_Address'] . '</small>
+									<div class="d-flex justify-content-between">
+										<div class="mt-2">
+											<small>Complaint Status - ' . $row['Complaint_Status'] . '</small>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>	
@@ -67,6 +71,41 @@ $num = mysqli_num_rows($result);
 				?>
 			</div>
 			<div class="col-lg-4 col-md-4">
+				<div>
+					<h3 class="py-1 stats_head">Update Status</h3>
+					<form action="admin.php" method="post">
+						<div class="input-group mb-2">
+							<span class="input-group-text">Reference Id</span>
+							<input type="number" class="form-control" name="ref_id">
+						</div>
+						<select class="form-select mb-3" name="status" id="status">
+							<option selected disabled>Update Status</option>
+							<option value="Submitted">Submitted</option>
+							<option value="Processed">Processed</option>
+							<option value="Running">Running</option>
+							<option value="Closed">Closed</option>
+						</select>
+						<button class="btn btn-primary" type="submit">Update</button>
+					</form>
+					<?php
+					if ($_SERVER["REQUEST_METHOD"] == "POST") {
+						$Complaint_id = $_POST['ref_id'];
+						$Complaint_status = $_POST['status'];
+						$updateStatus = "UPDATE `complaints` SET `Complaint_Status` = '$Complaint_status' WHERE `complaints`.`Reference_id` = '$Complaint_id'";
+						$run = mysqli_query($con, $updateStatus);
+						if (!$run) {
+							die('Error: ' . mysqli_error($con));
+						}
+						echo '
+						<div class="alert alert-success alert-dismissible fade show my-3" role="alert">
+							<strong>Success!</strong> Complaint Status has been updated in Database
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+						</div>
+						';
+					}
+					?>
+				</div>
+				<hr>
 				<aside>
 					<ul class="list-group mb-3 mt-2">
 						<li class="list-group-item active">Archives</li>
