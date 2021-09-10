@@ -32,6 +32,9 @@ echo '
             <li class="nav-item">
                <a class="nav-link" href="/onDuty/pages/stats.php">Statistics</a>
             </li>
+            <li class="nav-item">
+               <a class="nav-link" href="/onDuty/pages/checkStatus.php">Complaint Status</a>
+            </li>
          </ul>';
 
 if (!$auth) {

@@ -70,6 +70,9 @@ if (isset($_POST["captcha"]) && $_POST["captcha"] != "" && $_SESSION["code"] == 
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/stats.php">Statistics</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/checkStatus.php">Complaint Status</a>
+                        </li>
                     </ul>
                     <div class="d-flex mx-2">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
