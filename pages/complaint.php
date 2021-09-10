@@ -30,7 +30,7 @@
     <style>
         #emblem {
 			margin-left: 2.5em;
-			width: 80%;
+			width: 90%;
 		}
     </style>
 </head>
